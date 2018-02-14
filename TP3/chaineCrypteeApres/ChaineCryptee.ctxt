@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ChaineCryptee
+comment0.text=\n\ Pour\ crypt\u00E9e\ les\ chaines\ des\ caract\u00E9res\n\n\ @author\ ABDELMOULMENE\n\ @version\ 1\n
+comment1.params=encryptee\ decalage
+comment1.target=ChaineCryptee(java.lang.String,\ int)
+comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ ChaineCryptee\ \n\ \n\ @param\ encryptee\ pour\ initialiser\ la\ chaine\ des\ caract\u00E9res\ enClair\n\ @param\ decalage\ pour\ initialiser\ le\ variable\ decalage\n
+comment2.params=
+comment2.target=java.lang.String\ decrypte()
+comment2.text=\n\ Un\ exemple\ de\ m\u00E9thode\ -\ remplacez\ ce\ commentaire\ par\ le\ v\u00F4tre\n\ @return\ \ \ \ \ la\ chaine\ des\ caract\u00E9res\ enClair\ decrypte\u00E9\n
+comment3.params=c\ decalage
+comment3.target=char\ decaleCaractere(char,\ int)
+comment3.text=\n\ D\u00E9cale\ un\ caract\u00E8re\ majuscule.\n\ Les\ lettres\ en\ majuscule\ ('A'\ -\ 'Z')\ sont\ d\u00E9cal\u00E9s\ de\ <code>decalage</code>\n\ caract\u00E8res\ de\ fa\u00E7on\ circulaire.\ Les\ autres\ caract\u00E8res\ ne\ sont\ pas\ modifi\u00E9s.\n\n\ @param\ c\ le\ caract\u00E8re\ \u00E0\ d\u00E9caler\n\ @param\ decalage\ le\ d\u00E9calage\ \u00E0\ appliquer\n\ @return\ le\ caract\u00E8re\ d\u00E9cal\u00E9\n
+comment4.params=
+comment4.target=java.lang.String\ encrypte()
+comment4.text=\n\ Encrypte\ la\ chaine\ des\ caracteres\ enClair\n\ avec\ un\ decalage\n\ @return\ la\ chaine\ enClair\ crypte\u00E9\ avec\ decalage\ si\ enClair\ est\ different\ de\ null\ sinon\ null\n
+numComments=5
