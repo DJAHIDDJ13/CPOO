@@ -58,7 +58,6 @@ public class ChaineCryptee
      * avec un decalage
      * @return la chaine enClair crypteé avec decalage si enClair est different de null sinon null
      */
-    public String encrypte()
     {
         return encryptee;
     }
