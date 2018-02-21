@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Repertoire
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ Repertoire\ ici.\n\n\ @author\ (votre\ nom)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment1.params=nom\ taille\ estRacine
+comment1.target=Repertoire(java.lang.String,\ int,\ boolean)
+comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ Repertoire\n
+comment2.params=fichier
+comment2.target=boolean\ ajouter(Fichier)
+comment3.params=
+comment3.target=int\ calcTaille()
+numComments=4
