@@ -10,6 +10,7 @@ public abstract class Fichier
     // variable d'instance - remplacez cet exemple par le vôtre
     private String nom;
     private int taille;
+    public int getTaille() { return taille; }
     
     public Fichier(String nom, int taille){
         this.nom = nom;

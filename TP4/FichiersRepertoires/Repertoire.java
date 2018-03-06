@@ -32,7 +32,7 @@ public class Repertoire extends Fichier
         }
     }
     public int calcTaille(){
-        int total = nbrFichiers;
+        int total = getTaille();
         for (Fichier f: fichiers) {
             if(f.getClass() == Repertoire.class){
                 total += ((Repertoire)f).calcTaille();
@@ -41,3 +41,4 @@ public class Repertoire extends Fichier
         return total;
     }
 }
+ 
