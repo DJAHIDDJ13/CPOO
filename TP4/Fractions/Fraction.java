@@ -2,16 +2,22 @@
 /**
  * Décrivez votre classe ClFraction ici.
  *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author ABDELMOUMENE
+ * @version 7/07/18
  */
 public class Fraction implements interfaceFraction
 {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtr
+    // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private int num;
+    public int getNum(){
+        return num;
+    }
     private int den;
+    public int getDen(){
+        return den;
+    }
     /**
-     * Constructeur d'objets de classe ClFraction
+     * Constructeur d'objets de classe Fraction
      */
     public Fraction(int num, int den)
     {
@@ -20,15 +26,11 @@ public class Fraction implements interfaceFraction
     }
     public Fraction(int num)
     {
-
-        this.num = num;
-        this.den = 0;
+        this(num, 1);
     }
     public Fraction()
     {
-
-        this.num = 1;
-        this.den = 0;
+        this(0);
     }
     public Fraction add(Fraction f){
         return new Fraction(f.num*den+f.den*num,f.den * den);
@@ -38,5 +40,8 @@ public class Fraction implements interfaceFraction
     }
     public double valeur(){
         return ((double) num)/((double)den);
+    }
+    public String toString(){
+        return num+"/"+den;
     }
 }
