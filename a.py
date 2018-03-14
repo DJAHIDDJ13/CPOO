@@ -18,7 +18,12 @@ def draw(l1,l2,w1,w2):
 w1,w2 = input().split()
 w1 = w1.upper()
 w2 = w2.upper()
+br = False
 for i in range(len(w1)):
 	for j in range(len(w2)):
 		if w1[i] == w2[j]:
 			draw(i,j,w1,w2)
+			br = True
+			break
+	if br:
+		break
