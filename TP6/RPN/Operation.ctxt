@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Operation
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ operation\ ici.\n\n\ @author\ ABDELMOUMENE\n\ @version\ 21/03/18\n
+comment1.params=d1\ d2
+comment1.target=double\ eval(double,\ double)
+comment2.params=d1\ d2
+comment2.target=double\ eval(double,\ double)
+comment3.params=d1\ d2
+comment3.target=double\ eval(double,\ double)
+comment4.params=d1\ d2
+comment4.target=double\ eval(double,\ double)
+comment5.params=c
+comment5.target=Operation(char)
+comment6.params=d1\ d2
+comment6.target=double\ eval(double,\ double)
+numComments=7
