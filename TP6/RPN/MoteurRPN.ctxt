@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=MoteurRPN
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ calculatrice\ ici.\n\n\ @author\ ABDELMOUMENE\n\ @version\ 21/03/18\n
+comment1.params=
+comment1.target=java.util.Stack\ getStack()
+comment2.params=
+comment2.target=MoteurRPN()
+comment2.text=\n\ Constructeur\ d'objets\ de\ classe\ calculatrice\n
+comment3.params=n
+comment3.target=void\ push(double)
+comment4.params=
+comment4.target=double\ pop()
+comment5.params=p
+comment5.target=java.util.Stack\ calc(Operation)
+comment6.params=
+comment6.target=void\ main()
+numComments=7
