@@ -35,5 +35,5 @@ public enum Operation
         symbole = c;
     }
     
-    public abstract double eval(double d1, double d2);
+    public abstract double eval(double d1, double d2)throws IllegalArgumentException;
 }

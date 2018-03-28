@@ -9,68 +9,70 @@ import java.io.*;
 public class calculatrice
 {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
-   private double stack[];
-   private int top;
-   public static double MAX_VALUE = 10000000.0;
-   public double MIN_VALUE = 0.00001;
-
+   private Stack<Double> stack;
     /**
      * Constructeur d'objets de classe calculatrice
      */
     public calculatrice()
     {
-        // initialisation des variables d'instance
-        stack = new double[100];
-        top = 0;
+        stack = new Stack<Double>();
     }
     public void push(double n){
-        stack[top] = n;
-        top++;
+        stack.push(n);
     }
     public double pop(){
-        top--;
-        return stack[top];
+        try{
+            return stack.pop();
+        } catch(EmptyStackException e) {
+            return 0;
+        }
     }
-    public void MoteurRPN(String s){
-            double d1, d2;
-            Operation p;
-
-            switch(s){
+    public void saisieRPN(){
+        Scanner scanner = new Scanner(System.in);
+        while_:while (scanner.hasNext()) {
+           String s = scanner.next();
+           switch(s){
                     case "+":
-                        d1 = pop();
-                        d2 = pop();
-                        p = Operation.PLUS;
-                        push(p.eval(d1,d2));
-                    break;
+                        MoteurRPN(Operation.PLUS);
+                        break;
                     case "-":
-                        d1 = pop();
-                        d2 = pop();
-                        p = Operation.MOINS;
-                        push(p.eval(d1,d2));
-                    break;
+                        MoteurRPN(Operation.MOINS);
+                        break;
                     case "*":
-                        d1 = pop();
-                        d2 = pop();
-                        p = Operation.MULT;
-                        push(p.eval(d1,d2));
-                    break;
+                        MoteurRPN(Operation.MULT);
+                        break;
                     case "/":
-                        d1 = pop();
-                        d2 = pop();
-                        p = Operation.DIV;
-                        push(p.eval(d1,d2));
-                    break;
-                    default: push(Double.parseDouble(s));
+                        MoteurRPN(Operation.DIV);
+                        break;
+                    case "exit":
+                        try{
+                            System.out.println(stack);
+                        } catch(EmptyStackException e){
+                            System.out.println("vide");
+                        }
+                        break while_;
+                    default:
+                        try{
+                            push(Integer.parseInt(s));
+                        } catch(NumberFormatException e){
+                            break;
+                        }
+            }   
+        }
+        scanner.close();
+    }
+    public boolean MoteurRPN(Operation p){
+            try{
+                push(p.eval(pop(), pop()));
+                return true;
+            } catch(EmptyStackException e){
+                return false;
+            } catch(IllegalArgumentException e){
+                return false;
             }
-            for(int i=0; i<top; i++)
-                System.out.println(stack[i]);
     }
     public static void main(){
         calculatrice c = new calculatrice();
-        Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()) {
-            c.MoteurRPN(scanner.next());
-        }
-        scanner.close();
+        c.saisieRPN();
     }
 }
